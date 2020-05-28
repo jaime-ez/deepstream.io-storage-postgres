@@ -10,7 +10,8 @@
     "test": "mocha --opts mocha.opts 'test/*.spec.ts' --exit",
     "coverage": "nyc mocha 'test/*.spec.ts' --exit",
     "ci": "npm run tsc && npm run coverage",
-    "docker": "docker run -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres"
+    "docker": "docker run -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword postgres",
+    "postinstall": "npm run tsc"
   },
   "repository": {
     "type": "git",
